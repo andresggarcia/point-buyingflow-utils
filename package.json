@@ -1,0 +1,32 @@
+{
+  "name": "point-buyingflow-utils",
+  "version": "0.0.1",
+  "description": "A set of helper tools for point buying flow.",
+  "types": "./lib/index.d.ts",
+  "main": "./lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "author": "AG",
+  "license": "private",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andresggarcia/point-buyingflow-utils.git"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.0-rc"
+  },
+  "dependencies": {
+    "@types/jsonwebtoken": "^8.3.2",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
