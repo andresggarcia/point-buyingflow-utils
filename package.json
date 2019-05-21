@@ -1,6 +1,6 @@
 {
   "name": "point-buyingflow-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of helper tools for point buying flow.",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.js",

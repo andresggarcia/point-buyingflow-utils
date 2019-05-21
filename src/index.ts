@@ -39,11 +39,13 @@ export class Vault {
    * @param {string} token 
    */
   private verify(token: string) {
+    let decodedToken = {};
     jwt.verify(token, this.SECRET, (err, decoded) => {
       if (err) {
         throw new Error('Token is not valid or expired.');
       }
-      return decoded;
+      decodedToken = decoded;
     });
+    return decodedToken;
   }
 }
