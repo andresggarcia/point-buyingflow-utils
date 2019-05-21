@@ -24,7 +24,7 @@ export class Vault {
    * Token signing
    * @param {string} key
    */
-  private sign(key: string) {
+  public sign(key: string) {
     if (!key) {
       throw new Error('Missing key.');
     }
@@ -38,7 +38,7 @@ export class Vault {
    * Token verification
    * @param {string} token 
    */
-  private verify(token: string) {
+  public verify(token: string) {
     let decodedToken = {};
     jwt.verify(token, this.SECRET, (err, decoded) => {
       if (err) {
