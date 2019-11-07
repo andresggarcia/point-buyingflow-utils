@@ -6,12 +6,15 @@ export class Vault {
 
   /**
    * Instantiates the Vault class
-   * @param secret The seed string. 
+   * @param secret The seed string.
    * @param options Extra options for jwt
    */
-  constructor(secret: string, options: jwt.SignOptions = {
-    expiresIn: '24h'
-  }) {
+  constructor(
+    secret: string,
+    options: jwt.SignOptions = {
+      expiresIn: '24h',
+    },
+  ) {
     if (!secret) {
       throw new Error('Missing secret.');
     }
@@ -33,10 +36,9 @@ export class Vault {
     return token;
   }
 
-
   /**
    * Token verification
-   * @param {string} token 
+   * @param {string} token
    */
   public verify(token: string) {
     let decodedToken = {};
